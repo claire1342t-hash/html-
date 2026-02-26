@@ -1,0 +1,95 @@
+/* 強制移除所有瀏覽器預設的間距 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'BillieAlbumFont', serif;
+}
+@font-face {
+  font-family: 'BillieAlbumFont';
+  src: url('font/BillieAlbumFont.woff.otf') format("woff");
+}
+
+a {
+  text-decoration: none; /* 移除所有連結預設的底線 */
+  color: inherit;        /* 繼承父元素的文字顏色，或指定您要的顏色 (例如 white) */
+  transition: color 0.3s; /* 選配：讓變色過程滑順一點 */
+}
+a:hover {
+  text-decoration: none;
+  color: #2f80d8;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+body {
+  background-color: #12132f;
+  color: rgb(255, 255, 255);
+  margin: 4px;
+  padding: 0;
+}
+
+
+header {
+  padding: 13px;
+  position: relative; /* 作為 Logo 定位的基準,讓a標籤可以設定寬高手動調整 */
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平置中 */
+  height: 75px; /* 確保高度足夠容納 Logo */
+}
+.header-main .logo {
+  position: absolute; /* 讓 Logo 從正常文檔流中脫離 */
+}
+.header-main .logo a{
+  background-image: url("image/logo.png");
+  background-size: contain; /*讓圖片完整顯示*/
+  background-repeat: no-repeat; /*避免重複*/
+  display: inline-block; /*讓a標籤可以設定寬高*/
+  width: 60px;
+  height: 60px;
+  text-indent: -9999999px; /*隱藏文字*/
+  overflow: hidden; /*隱藏超出部分*/
+}
+
+nav ul{
+  display: flex;
+  list-style: none;        /* 移除預設的小圓點 */
+  padding: 0;              /* 移除預設的內邊距，避免置中偏移 */
+}
+nav li {
+  margin-left: 20px; /* 選單項目之間的間距 */
+}
+.header-main nav{
+  margin-left: auto; /* 將導航欄推到右側 */
+}
+
+.header-sub{
+  height: 10px;
+  margin: 0px;
+  font-size: small;
+}
+
+
+hr{
+  border-top: 3.5px solid #F99E36; /* solid=一條連續、不間斷的直線。*/
+  margin: 0px; /* 上下間距 */
+  padding: 0px;
+  border-bottom: none;
+}
+
+
+section{
+
+}
+
+
+
+footer{
+  background-color: #F99E36;
+  padding: 10px 20px;
+}

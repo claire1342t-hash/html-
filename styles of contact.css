@@ -1,0 +1,98 @@
+/* 1. 設定所有超連結的初始狀態 */
+a {
+  text-decoration: none; /* 移除所有連結預設的底線 */
+  color: inherit;        /* 繼承父元素的文字顏色，或指定您要的顏色 (例如 white) */
+  transition: color 0.3s; /* 選配：讓變色過程滑順一點 */
+}
+a:hover {
+  text-decoration: none;  /* 確保 hover 時也不會出現底線 */
+  color: rgb(249, 167, 3);         /* 這裡設定您想要的變色數值 */
+}
+
+
+
+body {
+  background-color: #05083c;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+}
+
+
+
+header{
+  background-color: #040630;
+  padding: 10px;
+  position: relative; /* 作為 Logo 定位的基準,讓a標籤可以設定寬高手動調整 */
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  height: 80px; /* 確保高度足夠容納 Logo */
+}
+header .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /*left: 50% 會讓 Logo 左邊界對齊中線*/
+}
+header .logo a{
+  background-image: url("image/logo.png");
+  background-size: contain; /*讓圖片完整顯示*/
+  background-repeat: no-repeat; /*避免重複*/
+  display: inline-block; /*讓a標籤可以設定寬高*/
+  width: 50px;
+  height: 80px;
+  text-indent: -9999999px; /*隱藏文字*/
+  overflow: hidden; /*隱藏超出部分*/
+}
+
+
+
+nav {
+  margin-left: auto; /* 將導航欄推到右側 */
+}
+ul {
+  display: flex;
+  list-style: none;        /* 移除預設的小圓點 */
+  padding: 0;              /* 移除預設的內邊距，避免置中偏移 */
+}
+li {
+  margin-left: 20px; /* 選單項目之間的間距 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+section{
+  background-color: rgb(96, 7, 7);
+  padding: 20px;
+  display:flex; /*flexbox排列方式*/
+  /*flex-direction: row-reverse;反向排列*/
+}
+.feature-box div{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 100px; /*讓文字垂直置中*/
+  font-size: 24px;
+  color: white;
+  border-radius: 12px;
+}
+section.feature-box.main div{
+  background-color: rgb(200, 200, 200);
+}
+section.feature-box.content div{
+  background-color: rgb(224, 40, 40);
+}
+footer{
+  background-color: rgb(249, 167, 3);
+  padding: 10px 20px;
+}
