@@ -15,6 +15,10 @@ a:hover {
   box-sizing: border-box;
   font-family: 'BillieAlbumFont', serif;
 }
+@font-face {
+  font-family: 'BillieAlbumFont';
+  src: url('font/BillieAlbumFont.woff.otf') format("woff");
+}
 
 body {
   background-color: #05083c;
