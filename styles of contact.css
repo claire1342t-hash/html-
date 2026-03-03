@@ -9,7 +9,12 @@ a:hover {
   color: rgb(249, 167, 3);         /* 這裡設定您想要的變色數值 */
 }
 
-
+* {
+  margin: 0;
+  padding: 3.5px;
+  box-sizing: border-box;
+  font-family: 'BillieAlbumFont', serif;
+}
 
 body {
   background-color: #05083c;
@@ -22,11 +27,11 @@ body {
 
 header{
   background-color: #040630;
-  padding: 10px;
+  padding: 13px;
   position: relative; /* 作為 Logo 定位的基準,讓a標籤可以設定寬高手動調整 */
   display: flex;
   align-items: center; /* 垂直居中 */
-  height: 80px; /* 確保高度足夠容納 Logo */
+  height: 75px; /* 確保高度足夠容納 Logo */
 }
 header .logo {
   position: absolute;
@@ -38,8 +43,8 @@ header .logo a{
   background-size: contain; /*讓圖片完整顯示*/
   background-repeat: no-repeat; /*避免重複*/
   display: inline-block; /*讓a標籤可以設定寬高*/
-  width: 50px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   text-indent: -9999999px; /*隱藏文字*/
   overflow: hidden; /*隱藏超出部分*/
 }
